@@ -1,0 +1,257 @@
+/* CUERPO PRINCIPAL */
+body {
+  /*background-image: url("./img/flower-2684651_1920.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;*/
+  background-color: #a4674b;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* HEADER */
+
+header {
+  align-items: center;
+  background-color: #00000090;
+  border-bottom: 1px solid;
+  display: flex;
+  flex-direction: column;
+  height: 239px;
+  justify-content: space-around;
+  width: 100%;
+  z-index: 1;
+}
+
+header .title a{
+  color: #FFC300;
+  font-family: 'Arima Madurai', cursive;
+  font-size: 10vh;
+}
+
+header .menu_icon div {
+  background-color: white;
+  display: none;
+  height: 5px;
+  margin: 6px 0;
+  width: 35px;
+}
+
+header .nav_main {
+  display: flex;
+  justify-content: space-around;
+  padding: 0;
+  margin-top: 0;
+  width: 30%;
+}
+
+header .nav_main li {
+  list-style: none;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+header .nav_main li a {
+  color: #E6E4E0;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 21px;
+  transition: color 0.5s;
+}
+ 
+header .nav_main li a:hover {
+  color: #cc2801;
+}
+
+/* PAGINA DE CONTACTO */
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 75vh; 
+}
+
+.container .carta {
+  box-shadow: -11px 11px 20px 0px;
+  background-color: #9e9280;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  max-width: 50%;
+  max-height: 80%;
+  padding: 50px;
+}
+
+.container .carta h1 {
+  font-family: 'Abril Fatface', cursive;
+  letter-spacing: 2px;
+  font-size: 6vw;
+  flex-grow: 1;
+  margin: 0px;
+}
+
+.container .carta .speach {
+  flex-grow: 5;
+  font-family: 'Saira Condensed', sans-serif;
+  font-size: 2vh;
+  margin: 50px;
+}
+
+.container .carta .information {
+  flex-grow: 1;
+  font-family: 'Saira Condensed', sans-serif;
+  font-size: 2vh;
+}
+
+/* PRODUCTOS */
+
+.shop {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.shop .box {
+  background-color: #bd7c5e;
+  padding: 20px;
+  margin: 30px;
+  display: flex;  
+  border: 1px solid #00000006;
+  box-shadow: -8px 8px 17px 0px #00000024;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.shop .box:hover {
+  z-index: 2;
+  transform: scale(1.1);
+}
+
+
+.shop .box img {
+  width: auto;
+  height: 200px;
+  padding-right: 10px;
+}
+
+.shop .box .text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.shop .box .text .title {
+  flex-grow: 1;
+  font-family: "Roboto Slab", Arial;
+  font-size: 20px;
+}
+
+.shop .box .text .description {
+  flex-grow: 5;
+  overflow: hidden;
+  width: 300px;
+  height: 100px;
+  font-family: 'Saira Condensed', sans-serif;
+}
+
+.shop .box .text .price {
+  align-self: flex-end;
+  font-family: 'Saira Condensed', sans-serif;
+  color: #246b00;
+  font-size: 22px;
+}
+
+footer {
+  display: flex;
+  position: relative;
+  background-image: url("./img/spot-1874076_1920.jpg");
+  background-repeat: no-repeat;
+  background-position: 0px 65%;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 200px;
+  width: 100%;
+}
+
+footer div.barba {
+  display: flex;
+  font-size: 40px;
+  font-family: 'Lobster', cursive;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  text-shadow: -4px 2px 1px #d40645;
+  color: #000000;
+}
+
+@media only screen and (max-width: 1400px) {
+  .shop .box {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .shop .box img {
+    padding-bottom: 10px;
+    padding-right: 0px;
+  }
+
+  .shop .box .text .description {
+    height: auto;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+
+  header {
+    height: 90px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  header .title a {
+    font-size: 9vw;
+    padding-left: 0;
+  }
+
+  header .nav_main {
+    display: block;
+    position: fixed;
+    z-index: 2;
+    background-color: #191102;
+    height: 110%;
+    width: 0px;
+    overflow-x: hidden;
+    top: -15px;
+    left: 0;
+    padding: 0;
+    margin-top: 15px;
+    transition: 0.5s;
+  }
+
+  header .nav_main li {
+    padding: 20px 50px;
+  }
+
+  header .menu_icon {
+    position: absolute;
+    left: 5%;
+  }
+
+  header .menu_icon div {
+    display: block;
+  }
+
+  footer div.barba {
+    font-size: 20px;
+    text-shadow: -1.5px 1.5px 1px #d40645;
+  }
+}
